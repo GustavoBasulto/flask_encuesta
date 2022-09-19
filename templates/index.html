@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Encuesta</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='style.css') }}'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='bootstrap.css') }}'>
+</head>
+<body>
+    <div class="container mx-auto row justify-content-md-center">
+        <div class="form col col-lg-4">
+            <h2 class="text-warning" >Encuesta Dojo</h2>
+            <form name="info" method="post" action="/process">
+                <div class="form-group">
+                    <label for="tunombre" class="text-white">Tu nombre</label>
+                    <input type="text" class="form-control" id="tunombre" name="nombre" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="eubicaciondojo" class="text-white">Ubiacion Dojo</label>
+                    <select class="form-control" id="ubicaciondojo" name="ubicacion">
+                        <option value="santiago">Santiago</option>
+                        <option value="curico">Curico</option>
+                        <option value="valdivia">Valdivia</option>
+                        <option valu="antofagasta">Antofagasta</option>
+                        <option value="iquique">Iquique</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lenguaje" class="text-white">Lenguaje favorito</label>
+                    <select class="form-control" id="lenguaje"name="lenguaje">
+                        <option value="C#">C#</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option valu="PHP">PHP</option>
+                        <option value="ruby">Ruby</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coments" class="text-white">Comentarios</label>
+                    <textarea class="form-control" id="coments" rows="3" name="comentarios"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary bg-warning">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
